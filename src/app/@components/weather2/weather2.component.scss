@@ -1,0 +1,240 @@
+// 最上面的bar
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0px 0px 0px 32px;
+  background-color: #164c47;
+  color: #fff;
+
+  align-items: stretch;   /* ⭐重點 */
+  height: 100px;           /* ⭐固定高度 */
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 900;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf) format('opentype');
+
+}
+
+.title img {
+  height: 64px;
+}
+
+.Buttons button {
+  height: 100%;
+
+  padding: 0 20px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.Buttons button:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.Buttons button.active {
+  background-color: #0b2f2c;
+  color: rgb(255, 255, 255);
+}
+
+
+
+// 時間地區
+.TimeAndZone {
+  display: flex;
+  padding: 24px 40px;
+  color: #555;
+  justify-content: center;
+  font-size: 16px;
+  letter-spacing: 5px;
+
+}
+.Time{
+  margin-right: 32px;
+}
+
+// 以下為主要內容
+// .information{
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   padding: 40px 80px;
+//   margin: 0 auto;
+//   max-width: 1200px;   /* ⭐關鍵 */
+//   width: 100%;
+
+// }
+//
+// 2/8刪除
+
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+
+}
+
+
+
+
+// 剛剛刪掉的
+// .weatherRow {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   max-width: 500px;
+//   margin: 0 auto;
+
+
+// }
+// 以上是剛剛刪掉的
+
+
+// .main{
+//   display: flex;
+//   flex-direction: column;
+//   max-width: 500px;
+// }
+
+
+
+.detail{
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+
+// 細節
+.stretch{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px;
+  border-bottom: #B6CECA 6px solid;
+  width:320px;
+  margin: 8px;
+
+}
+.point{
+
+  text-align: left;
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
+  font-size: 28px;
+  color: #164c47;
+}
+.value{
+
+  text-align: right;
+  font-family: 'Noto Sans TC';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format('opentype');
+  font-size: 36px;
+  color: #164c47;
+}
+
+.Temp{
+  font-size: 240px;
+  line-height: 1;
+  margin: 0;
+  font-weight: 600;
+  color: #164c47;
+  font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 700;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf) format('opentype');
+
+
+}
+
+.Temperature{
+  display: flex;
+  align-items:baseline;
+}
+
+.celsius{
+  font-size: 120px;
+  font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 700;
+   color: #164c47;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf) format('opentype');
+
+  margin: 0px;
+}
+
+
+.illust {
+  align-items: center;
+  z-index: 3;
+  margin-left: 10px;
+
+}
+
+.illust img {
+  width: 700px;
+  filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.7))
+}
+
+
+
+
+
+body{
+  background-image: url("/img/images\ \(3\).png");
+}
+
+
+// 2/9改
+
+.left{
+  display: flex;
+  flex-direction: column;
+}
+
+.weatherdescription{
+font-size: 18px;
+  font-family: 'Noto Sans TC';
+   font-style: normal;
+   font-weight: 700;
+   color: #164c47;
+   src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Black.otf) format('opentype');
+}
+
+.all{
+  filter: drop-shadow(0px 0px 100px rgba(255, 255, 255, 0.7));
+  background-color: #fff opacity($color: #000000);
+}
+

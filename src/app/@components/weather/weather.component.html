@@ -1,0 +1,52 @@
+<label>請選擇區域：</label>
+
+  @for (banana of AllInfo; track banana.LocationName) {
+    <button (click)="selectLocation(banana)">
+      {{ banana?.LocationName }}
+    </button>
+  }
+
+  <br /><br />
+  <label>已選擇： {{ AreaName }}</label>
+
+
+<hr />
+
+<div class="card">
+  @for (weatherdetail of weather; track weatherdetail?.ElementName) {
+    <div class="cardContent">
+      <h5>{{ weatherdetail?.ElementName }}</h5>
+
+      @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.Temperature) {
+        <div>溫度：{{ weatherdetail.Time[0].ElementValue[0].Temperature }}</div>
+      }
+      @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.DewPoint) {
+        <div>露點溫度：{{ weatherdetail.Time[0].ElementValue[0].DewPoint }}</div>
+      }
+      @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.RelativeHumidity) {
+        <div>相對濕度：{{ weatherdetail.Time[0].ElementValue[0].RelativeHumidity }}</div>
+      }
+      @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.ApparentTemperature) {
+        <div>體感溫度：{{ weatherdetail.Time[0].ElementValue[0].ApparentTemperature }}</div>
+      }
+      @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.ComfortIndexDescription) {
+        <div>舒適度指數：{{ weatherdetail.Time[0].ElementValue[0].ComfortIndexDescription }}</div>
+      }
+      @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WindSpeed) {
+        <div>風速：{{ weatherdetail.Time[0].ElementValue[0].WindSpeed }}</div>
+      }
+      @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WindDirection) {
+        <div>風向：{{ weatherdetail.Time[0].ElementValue[0].WindDirection }}</div>
+      }
+      @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.ProbabilityOfPrecipitation) {
+        <div>3小時降雨機率：{{ weatherdetail.Time[0].ElementValue[0].ProbabilityOfPrecipitation }}%</div>
+      }
+      @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.Weather) {
+        <div>天氣現象：{{ weatherdetail.Time[0].ElementValue[0]?.Weather }}</div>
+      }
+      @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherDescription) {
+        <div>天氣預報描述：{{ weatherdetail.Time[0].ElementValue[0]?.WeatherDescription }}</div>
+      }
+    </div>
+  }
+</div>

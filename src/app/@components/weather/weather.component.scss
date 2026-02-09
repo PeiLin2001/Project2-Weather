@@ -1,0 +1,11 @@
+.card{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardContent{
+  background-color: aliceblue;
+  min-width: 25%;
+  margin: 5px;
+  padding: 16px;
+}

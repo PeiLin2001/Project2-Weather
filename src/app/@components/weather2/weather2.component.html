@@ -1,0 +1,76 @@
+<!-- Navigate bar -->
+<div class="all">
+<div class="bar">
+  <div class="title"><img src="/img/cloudy-day (1).png"><span><h1>Weather Today!</h1></span></div>
+  <div class="Buttons">
+    @for (District of AllInfo; track District.LocationName) {
+      <button (click)="selectdis(District)"
+      [class.active]="selectedDistrictName === District.LocationName">
+      {{District.LocationName}}</button>
+    }
+  </div>
+</div>
+
+
+<!-- Main contents(下面這一整塊) -->
+
+<div class="ContentLayout">
+
+  <div class="TimeAndZone">
+    <div class="Time"><p>現在時間:{{nowTime|date: 'HH:mm' }}</p></div>
+    <div class="Zone"> <p>{{AreaName}}</p></div>
+  </div>
+
+  <!-- 以下是div information(氣象資訊)的內容 -->
+  <div class="information">
+    <div class="left">
+    @for (weatherdetail of currentweather; track $index) {
+        <div class="lefttop">
+        @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.Temperature) {
+          <div class="Temperature"><p class="Temp">{{ weatherdetail.Time[0].ElementValue[0].Temperature }}</p><p class="celsius">℃</p></div>
+        }
+      </div>
+      }
+
+      @for (weatherdetail of currentweather; track $index) {
+      <div class="detail">
+          @if(weatherdetail?.Time?.[0]?.ElementValue?.[0]?.RelativeHumidity) {
+            <div class="stretch"><p class="point">相對溼度</p> <p class="value">{{weatherdetail.Time[0].ElementValue[0].RelativeHumidity}}%</p></div>
+          }
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WindSpeed) {
+            <div class="stretch"><p class="point">風速</p> <p class="value">{{ weatherdetail.Time[0].ElementValue[0].WindSpeed }}m/s</p></div>
+          }
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.ProbabilityOfPrecipitation) {
+            <div class="stretch"><p class="point">降雨率</p><p class="value">{{ weatherdetail.Time[0].ElementValue[0].ProbabilityOfPrecipitation }}%</p></div>
+          }
+      </div>
+
+      }
+
+      </div>
+
+
+      @for (weatherdetail of currentweather; track $index) {
+      <div class="illust">
+        @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.Weather) {
+        <p class="weatherdescription">{{ weatherdetail.Time[0].ElementValue[0]?.Weather }}</p>
+          <img [src]="getWeatherIcon(+weatherdetail.Time[0].ElementValue[0].WeatherCode)">
+        }
+      </div>
+      }
+
+
+
+  </div>
+  <!-- 以上是div information的內容 -->
+
+
+
+
+</div>
+
+
+
+
+</div>
+

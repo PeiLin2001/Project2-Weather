@@ -1,0 +1,37 @@
+    @if ([2,3,4,5,6,7].includes(
+          weatherdetail.Time[0].ElementValue[0].WeatherCode?
+        )) {
+      <img src="/img/cloudy.png">
+    }
+
+    @else if (weatherdetail.Time[0].ElementValue[0].WeatherCode? === 1) {
+      <img src="/img/clear.png">
+    }
+
+    @else if ([25,26,27,28].includes(
+              weatherdetail.Time[0].ElementValue[0].WeatherCode?
+            )) {
+      <img src="/img/CloudyFog.png">
+    }
+
+    @else if (weatherdetail.Time[0].ElementValue[0].WeatherCode? === 24) {
+      <img src="/img/fog.png">
+    }
+
+    @else if ([8,9,10,11,12,13,14,19,20,29,30,31,32,38,39,].includes(
+              weatherdetail.Time[0].ElementValue[0].WeatherCode?
+            )) {
+      <img src="/img/rain.png">
+    }
+
+    @else if ([23, 37, 42].includes(
+              weatherdetail.Time[0].ElementValue[0].WeatherCode?
+            )) {
+      <img src="/img/snow.png">
+    }
+
+    @else if ([15, 16, 17, 18, 21, 22, 33, 34, 35, 36, 41].includes(
+              weatherdetail.Time[0].ElementValue[0].WeatherCode?
+            )) {
+      <img src="/img/Thunderstorm.png">
+    }

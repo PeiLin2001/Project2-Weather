@@ -1,0 +1,74 @@
+<!-- practice1 -->
+
+<!--
+ @for (fruit of fruits; track $index) {
+  <p>{{fruit}}</p>
+}
+  fruit是自己取的變數，fruits是已經在TS中定義好的陣列，track $index是fruits陣列中的索引位置
+  -->
+
+<!-- practice2 -->
+
+<!-- @for (item of fruits; track item.name) {
+  <p>{{item.name}}-{{item.color}}</p>
+}
+  item是自己取的變數，是從fruits陣列中拿出來的東西(物件)，
+  for就像複製貼上一直做，item.name是物件中的name這個項目的值。
+-->
+
+<!-- practice3 -->
+<!-- @for (fruit of fruits; track fruit.name) {
+  <button (click)="selectFruit(fruit.name)">
+    {{fruit.name}}
+  </button>
+} <br> <p>I choose {{selected}}</p> -->
+
+<!-- practice4 -->
+ <!-- @for (fruit of fruits; track $index) {
+  <button (click)="selectfruit(fruit)">{{fruit.name}}</button>
+ };
+ @if (fruitdetail.color) {
+  <p>顏色是:{{fruitdetail.color}}</p>
+ } -->
+
+ <!-- practice5 -->
+  <!-- @for (fruit of fruits; track $index) {
+    <h4>{{fruit.name}}</h4>
+    @for (vitamincontent of fruit.vitamin; track $index) {
+      <span>{{vitamincontent}}</span>
+    }
+  }; -->
+
+  <!-- practice6 -->
+   <!-- @for (fruit of fruits; track $index) {
+    <h4>{{fruit.name}}</h4>
+
+    @if (fruit.vitamin.length>0) {
+      @for (vitamincontent of fruit.vitamin; track $index) {
+        <span>{{vitamincontent}}</span>
+      }
+    }
+   } -->
+
+   @for (item of fruits; track $index) {
+    <button (click)="SelectItem(item.name)">{{item.name}}</button>
+   }
+   <h4>你選的是:{{SelectedFruit}}</h4>
+
+    @for (item of fruits; track $index) {
+      @if (SelectedFruit) {
+      <h3>{{ item.icon }} {{ item.name }}</h3>
+      }
+      <p>營養素：</p>
+    @for (vitamin of item.vitamins; track $index) {
+      <span>{{vitamin}}</span>
+    }
+
+
+    }
+
+
+
+
+
+

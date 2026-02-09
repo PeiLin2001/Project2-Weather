@@ -1,0 +1,14 @@
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 15 || 16 || 17 || 18 || 21 || 22 || 33 || 34 || 35 || 36 || 41) {
+          <img src="/img/Thunderstorm.png">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 1) {
+            <img src="/img/clear.png" alt="">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 25 || 26 || 27 || 28) {
+            <img src="/img/CloudyFog.png" alt="">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 2 || 3 || 4 || 5 || 6 || 7) {
+            <img src="/img/cloudy.png">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 24) {
+            <img src="/img/fog.png">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 8 || 9 || 10 || 11 || 12 || 13 || 14 || 19 || 20 || 29 || 30 || 31 || 32 || 38 || 39) {
+            <img src="/img/rain.png">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 23 || 37 || 42 ) {
+            <img src="/img/snow.png">}

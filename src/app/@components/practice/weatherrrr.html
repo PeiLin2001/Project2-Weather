@@ -1,0 +1,49 @@
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 15 || 16 || 17 || 18 || 21 || 22 || 33 || 34 || 35 || 36 || 41) {
+            <img src="/img/Thunderstorm.png">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 1) {
+            <img src="/img/clear.png" alt="">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 25 || 26 || 27 || 28) {
+            <img src="/img/CloudyFog.png" alt="">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 2 || 3 || 4 || 5 || 6 || 7) {
+            <img src="/img/cloudy.png">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 24) {
+            <img src="/img/fog.png">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 8 || 9 || 10 || 11 || 12 || 13 || 14 || 19 || 20 || 29 || 30 || 31 || 32 || 38 || 39) {
+            <img src="/img/rain.png">}
+          @if (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode === 23 || 37 || 42 ) {
+            <img src="/img/snow.png">}
+
+
+          @switch (weatherdetail?.Time?.[0]?.ElementValue?.[0]?.WeatherCode) {
+            @case (15) @case (16) @case (17) @case (18) @case (21)
+            @case (22) @case (33) @case (34) @case (35) @case (36)
+            @case (41){
+              <img src="/img/Thunderstorm.png">
+            }
+            @case (1) {
+              <img src="/img/clear.png">
+            }
+            @case (25) @case (26) @case (27) @case (28) {
+              <img src="/img/CloudyFog.png" alt="">
+            }
+            @case (2) @case (3) @case (4)
+            @case (5) @case (6) @case (7) {
+              <img src="/img/cloudy.png">
+            }
+            @case (24) {
+              <img src="/img/fog.png">
+            }
+            @case (8) @case (9) @case (10) @case (11) @case (12)
+            @case (13) @case (14) @case (19) @case (20) @case (29)
+            @case (30) @case (31) @case (32) @case (38) @case (39) {
+              <img src="/img/rain.png">
+            }
+            @case (23)
+            @case (37)
+            @case (42) {
+              <img src="/img/snow.png">
+            }
+            @default {
+              <p>一輩子打CODE</p>
+            }
+          }
